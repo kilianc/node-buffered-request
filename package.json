@@ -1,0 +1,25 @@
+{
+  "author": "Kilian Ciuffolo <me@nailik.org> (http://nailik.org)",
+  "name": "buffered-request",
+  "description": "request.pause() fix. Hack/patch that makes The request object buffered.",
+  "keywords": ["request", "pause", "resume", "buffer", "stream", "buffered"],
+  "version": "0.1.0",
+  "homepage": "https://github.com/kilianc/node-buffered-request",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kilianc/node-buffered-request"
+  },
+  "main": "./",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.0.x",
+    "should": "0.6.1",
+    "request": "2.9.x"
+  },
+  "engines": {
+    "node": "v0.6.x"
+  }
+}
