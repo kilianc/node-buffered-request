@@ -37,20 +37,6 @@ describe('buffered-request', function () {
       httpreq('https://localhost:8080')
     })
   })
-  it('should patch IncomingMessage.prototype / https', function (done) {
-    var server = https.createServer({
-      key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
-      cert: fs.readFileSync('test/fixtures/keys/agent2-cert.pem')
-    }, function (request, response) {
-      request.makeBuffered.should.be.instanceof(Function)
-      response.end()
-      server.close()
-      done()
-    })
-    server.listen(8080, function () {
-      httpreq('https://localhost:8080')
-    })
-  })
   it('should buffer the request / pipe in', function (done) {
     var originalHash = crypto.createHash('sha1')
     var receivedHash = crypto.createHash('sha1')
